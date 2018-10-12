@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 	<head>
 <title>title</title>
 <style></style>
@@ -15,6 +15,19 @@ $(document).ready(function(){
 }); 
 function poi0(){}
 function poi(){
+  $("#input02").click(function(){
+    var cc=$("#input01").val();
+	cc2=cc;
+	//console.log(cc);
+	cc=Math.abs(cc);
+	cc=Math.floor(cc);
+	if(cc2==cc){
+		console.log("yes");
+	}else{
+		console.log("no");
+	}
+	$("#div01").html(cc);
+  });
 }
 </script>
 
@@ -22,7 +35,7 @@ function poi(){
 	<body>
 		<input type="text" id="input01">
 		<input type="submit" id="input02">
-	<div>div</div>
+	<div id="div01">div</div>
 	<p>p</p>
 	</body>
 </html>
