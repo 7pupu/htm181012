@@ -14,6 +14,40 @@ $(document).ready(function(){
 	poi();
 }); 
 function poi0(){}
+	
+function poi2(cc){
+  var cc,cc2,tmp;
+  this.cc=cc;
+  cc2=0;
+  tmp=0;
+  //
+  switch(true){
+    case cc>80:
+      tmp=cc-80;
+      cc2=(tmp*5)+cc2;
+      cc=80;
+    case cc>60:
+      tmp=cc-60;
+      cc2=(tmp*4)+cc2;
+      cc=60;
+    case cc>40:
+      tmp=cc-40;
+      cc2=(tmp*3)+cc2;
+      cc=40;
+    case cc>20:
+      tmp=cc-20;
+      cc2=(tmp*2)+cc2;
+      cc=20;
+    case cc>0:
+      tmp=cc-0;
+      cc2=(tmp*1)+cc2;
+      cc=0;
+  }
+
+  console.log(cc,cc2,tmp);
+  var str=cc+" "+cc2+" "+tmp;
+  $("#div01").html(str);
+}
 function poi(){
   $("#input02").click(function(){
     var cc=$("#input01").val();
@@ -23,10 +57,10 @@ function poi(){
 	cc=Math.floor(cc);
 	if(cc2==cc){
 		console.log("yes");
+		poi2();
 	}else{
 		console.log("no");
 	}
-	$("#div01").html(cc);
   });
 }
 </script>
